@@ -13,9 +13,11 @@ const swap = () => {
   if (one.textContent === "°C") {
     one.textContent = "°F";
     two.textContent = "°C";
+    result.textContent = "";
   } else {
     one.textContent = "°C";
     two.textContent = "°F";
+    result.textContent = "";
   }
 };
 
@@ -43,5 +45,11 @@ const ceoversion = () => {
   }
 };
 
+const reset = () => {
+  converter.value = "";
+  result.textContent = "";
+};
+
 changeBtn.addEventListener("click", swap);
 convBtn.addEventListener("click", ceoversion);
+resetBtn.addEventListener("click", reset);
